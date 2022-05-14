@@ -1,31 +1,14 @@
 {
-  "name": "Hello Extensions",
-  "description": "Base Level Extension",
+  "name": "add note",
+  "description": "add your selectionText to your note",
   "version": "1.0",
   "manifest_version": 3,
   "action": {
-    "default_popup": "hello.html",
-    "default_icon": "hello_extensions.png"
-  },
-  "commands": {
-    "_execute_action": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+F",
-        "mac": "MacCtrl+Shift+F"
-      },
-      "description": "Opens hello.html"
-    }
+    "default_popup": "popup.html",
+    "default_icon": "default_icon.png"
   },
   "background": {
     "service_worker": "background.js"
   },
-  "content_scripts": [
-    {
-      "matches": ["https://*.com/*"],
-      "js": ["content-script.js"],
-      "run_at": "document_end"
-    }
-  ],
-  "permissions": ["storage", "activeTab", "scripting", "contextMenus"],
-  "options_page": "options.html"
+  "permissions": ["contextMenus","storage"]
 }

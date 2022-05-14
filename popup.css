@@ -1,0 +1,8 @@
+body { 
+  width: 300px; 
+}
+
+textarea { 
+  width: 250px;
+  min-height: 100px;
+}
