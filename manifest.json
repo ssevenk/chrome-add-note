@@ -5,7 +5,12 @@
   "manifest_version": 3,
   "action": {
     "default_popup": "popup.html",
-    "default_icon": "default_icon.png"
+    "default_icon": {
+      "16": "note_icon.png",
+      "32": "note_icon.png",
+      "48": "note_icon.png",
+      "128": "note_icon.png"
+    }
   },
   "background": {
     "service_worker": "background.js"

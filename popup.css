@@ -1,8 +1,16 @@
 body { 
-  width: 300px; 
+  width: 250px; 
+  min-height: 400px;
+  padding: 0px;
 }
 
 textarea { 
+  font-size: 14px;
+  color: #333333;
+  line-height: 1.5;
+  outline: none;
+  border: none;
   width: 250px;
-  min-height: 100px;
+  min-height: 400px;
+  resize: none;
 }

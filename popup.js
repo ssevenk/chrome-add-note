@@ -1,7 +1,8 @@
 let textDom = document.getElementById("text");
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  console.log({ request })
-	const { selectionText } = request;
-  textDom.innerHTML += '\n' + selectionText
-	sendResponse({});
-});
+textDom.addEventListener("input", (event)=>{
+  const value = event.target.value
+  chrome.storage.sync.set({ myText: value });
+})
+chrome.storage.sync.get("myText", ({ myText = '' }) => {
+  textDom.innerHTML = myText
+})

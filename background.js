@@ -10,7 +10,7 @@ chrome.runtime.onInstalled.addListener(() => {
 chrome.contextMenus.onClicked.addListener(function (info, tab) {
   const { selectionText, menuItemId } = info
   if (menuItemId === Title) {
-    chrome.storage.sync.get("myText", ({ myText }) => {
+    chrome.storage.sync.get("myText", ({ myText = '' }) => {
       const newText =  myText + selectionText + '\n'
       console.log({ myText, newText })
       chrome.storage.sync.set({ myText: newText });
